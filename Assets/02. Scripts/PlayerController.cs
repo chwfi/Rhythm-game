@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     bool angle2 = false;
     public GameObject[] square;
     public bool isDestroy;
+    public GameObject blow;
 
     public AudioSource BGM;
     private void Start()
@@ -91,7 +92,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Destroy()
     {
         yield return new WaitForSeconds(0.01f);
-        GameOver();
+        //GameOver();
         //Destroy(FindNearestObjectByTag("Square"));
         FindNearestObjectByTag("Square").SetActive(false);
     }
