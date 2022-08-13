@@ -18,27 +18,27 @@ public class TurnCamera : MonoBehaviour
     IEnumerator CameraAnim()
     {
         yield return new WaitForSeconds(7.78f);
-        anim.SetTrigger("Turn");
+        //anim.SetTrigger("Turn");
         yield return new WaitForSeconds(2.45f);        
         anim.SetTrigger("Turn");
-        yield return new WaitForSeconds(3.5f);
-        VC.m_Lens.OrthographicSize = 3.1f;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.32f);
+        VC.m_Lens.OrthographicSize = 3.8f;
+        yield return new WaitForSeconds(3.12f);
         VC.m_Lens.OrthographicSize = 5f;
         anim.SetTrigger("Turn2");
         yield return new WaitForSeconds(1.5f);
-        VC.m_Lens.OrthographicSize = 3.1f;
-        yield return new WaitForSeconds(3.35f);
+        VC.m_Lens.OrthographicSize = 3.8f;
+        yield return new WaitForSeconds(3.4f);
         VC.m_Lens.OrthographicSize = 5f;
         anim.SetTrigger("Turn3");
         yield return new WaitForSeconds(1.5f);
-        VC.m_Lens.OrthographicSize = 3.1f;
-        yield return new WaitForSeconds(3.35f);
+        VC.m_Lens.OrthographicSize = 3.8f;
+        yield return new WaitForSeconds(3.29f);
         VC.m_Lens.OrthographicSize = 5f;
         anim.SetTrigger("Turn2");
-        yield return new WaitForSeconds(1.5f);
-        VC.m_Lens.OrthographicSize = 3.1f;
-        yield return new WaitForSeconds(3.35f);
+        yield return new WaitForSeconds(1.49f);
+        VC.m_Lens.OrthographicSize = 3.8f;
+        yield return new WaitForSeconds(3.32f);
         VC.m_Lens.OrthographicSize = 5f;
         anim.SetTrigger("Turn3");
         
