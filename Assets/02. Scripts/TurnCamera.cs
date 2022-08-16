@@ -43,8 +43,10 @@ public class TurnCamera : MonoBehaviour
         anim.SetTrigger("Turn3");
         yield return new WaitForSeconds(1.6f);
         anim.SetTrigger("Turn4");
-        yield return new WaitForSeconds(21.1f);
+        yield return new WaitForSeconds(20.86f);
         anim.SetTrigger("Turn5");
+        yield return new WaitForSeconds(13f);
+        anim.SetTrigger("Turn6");
 
     }
 }

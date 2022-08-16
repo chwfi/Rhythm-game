@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] square;
     public bool isDestroy;
     public GameObject blow;
+    bool canMove = true;
 
     public AudioSource BGM;
     private void Start()
@@ -19,7 +20,14 @@ public class PlayerController : MonoBehaviour
 
         BGM = gameObject.GetComponent<AudioSource>();
         StartCoroutine(PlaySong());
+        StartCoroutine(End());
     }
+    private IEnumerator End()
+    {
+        yield return new WaitForSeconds(70.9f);
+        canMove = false;
+    }
+
     public IEnumerator PlaySong()
     {
         yield return new WaitForSeconds(1.88f);
@@ -32,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector3.up * speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space) && canMove == true || Input.GetMouseButtonDown(0) && canMove == true)
         {
             if (angle1 == true)
             {
