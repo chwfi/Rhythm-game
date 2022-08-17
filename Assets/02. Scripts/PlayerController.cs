@@ -70,10 +70,10 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && canMove == true || Input.GetMouseButtonDown(0) && canMove == true)
             {
-                DD();
+                /*DD();
                 Squares.SetActive(false);
                 GameOverScreen.SetActive(true);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject);*/
             }
         }
     }
@@ -91,10 +91,10 @@ public class PlayerController : MonoBehaviour
         {
             if(isDestroy == true)
             {
-                DD();
+                /*DD();
                 Squares.SetActive(false);
                 GameOverScreen.SetActive(true);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject);*/
             }
         }
     }
