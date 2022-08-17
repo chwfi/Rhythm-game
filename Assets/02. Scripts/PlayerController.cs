@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour
     public bool isDestroy;
     public GameObject blow;
     bool canMove = true;
+    public GameObject GameOverScreen;
+    public GameObject Squares;
 
     public AudioSource BGM;
     private void Start()
     {
         //square = GameObject.FindGameObjectsWithTag("Square");
-
         BGM = gameObject.GetComponent<AudioSource>();
         StartCoroutine(PlaySong());
         StartCoroutine(End());
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
         if (isDestroy == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space) && canMove == true || Input.GetMouseButtonDown(0) && canMove == true)
             {
                 StartCoroutine(Destroy());
                 isDestroy = false;
@@ -67,9 +68,12 @@ public class PlayerController : MonoBehaviour
         }
         else if (isDestroy == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space) && canMove == true || Input.GetMouseButtonDown(0) && canMove == true)
             {
-                //Destroy(this.gameObject);
+                DD();
+                Squares.SetActive(false);
+                GameOverScreen.SetActive(true);
+                Destroy(this.gameObject);
             }
         }
     }
@@ -87,14 +91,17 @@ public class PlayerController : MonoBehaviour
         {
             if(isDestroy == true)
             {
-                //Destroy(this.gameObject);
+                DD();
+                Squares.SetActive(false);
+                GameOverScreen.SetActive(true);
+                Destroy(this.gameObject);
             }
         }
     }
 
-    private void GameOver()
+    public void DD()
     {
-        
+        GameObject.Find("Percent").GetComponent<Percentage>().Over_Loading();
     }
 
     private IEnumerator Destroy()
