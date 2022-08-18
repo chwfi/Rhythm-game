@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-public class PlayerController : MonoBehaviour
+public class PlayerController02 : MonoBehaviour
 {
     public Transform player;
     public float speed = 1f;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator End()
     {
-        yield return new WaitForSeconds(70.9f);
+        yield return new WaitForSeconds(143f);
         canMove = false;
     }
 
