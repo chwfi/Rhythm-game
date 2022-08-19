@@ -22,7 +22,7 @@ public class TurnCamera02 : MonoBehaviour
         yield return new WaitForSeconds(4.65f);
         anim.SetTrigger("Turn01");
         canTurn = false;
-        VC.m_Lens.OrthographicSize = 3.5f;
+        VC.m_Lens.OrthographicSize = 4.5f;
         yield return new WaitForSeconds(9.25f);
         canTurn = true;
         VC.m_Lens.OrthographicSize = 4.5f;
@@ -36,7 +36,7 @@ public class TurnCamera02 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && canClick == true || Input.GetMouseButtonDown(0) && canClick == true)
             {
-                VC.m_Lens.OrthographicSize = 4.33f;
+                VC.m_Lens.OrthographicSize = 4.42f;
                 canClick = false;
             }
             else if (Input.GetKeyDown(KeyCode.Space) && canClick == false || Input.GetMouseButtonDown(0) && canClick == false)
