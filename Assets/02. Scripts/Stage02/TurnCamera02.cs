@@ -26,6 +26,8 @@ public class TurnCamera02 : MonoBehaviour
         yield return new WaitForSeconds(9.25f);
         canTurn = true;
         VC.m_Lens.OrthographicSize = 4.5f;
+        yield return new WaitForSeconds(48f);
+        anim.SetTrigger("Turn02");
 
 
     }

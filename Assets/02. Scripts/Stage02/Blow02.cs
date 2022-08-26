@@ -14,7 +14,7 @@ public class Blow02 : MonoBehaviour
     }
     private IEnumerator End()
     {
-        yield return new WaitForSeconds(143f);
+        yield return new WaitForSeconds(139f);
         canBlow = false;
     }
 

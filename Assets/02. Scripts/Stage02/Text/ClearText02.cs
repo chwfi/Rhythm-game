@@ -13,7 +13,7 @@ public class ClearText02 : MonoBehaviour
 
     public IEnumerator Clear()
     {
-        yield return new WaitForSeconds(143f);
+        yield return new WaitForSeconds(139f);
         anim.SetTrigger("Clear");
     }
 }

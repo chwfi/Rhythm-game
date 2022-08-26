@@ -25,7 +25,7 @@ public class PlayerController02 : MonoBehaviour
     }
     private IEnumerator End()
     {
-        yield return new WaitForSeconds(143f);
+        yield return new WaitForSeconds(139f);
         canMove = false;
     }
 
@@ -70,10 +70,10 @@ public class PlayerController02 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && canMove == true || Input.GetMouseButtonDown(0) && canMove == true)
             {
-                /*DD();
+                DD();
                 Squares.SetActive(false);
                 GameOverScreen.SetActive(true);
-                Destroy(this.gameObject);*/
+                Destroy(this.gameObject);
             }
         }
     }
@@ -91,17 +91,17 @@ public class PlayerController02 : MonoBehaviour
         {
             if(isDestroy == true)
             {
-                /*DD();
+                DD();
                 Squares.SetActive(false);
                 GameOverScreen.SetActive(true);
-                Destroy(this.gameObject);*/
+                Destroy(this.gameObject);
             }
         }
     }
 
     public void DD()
     {
-        GameObject.Find("Percent").GetComponent<Percentage>().Over_Loading();
+        GameObject.Find("Percent").GetComponent<Percentage02>().Over_Loading();
     }
 
     private IEnumerator Destroy()
