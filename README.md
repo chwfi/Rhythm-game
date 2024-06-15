@@ -6,5 +6,8 @@
 | 개발 기간  | 2022년 7월 ~ 8월  |
 | 개발 인원  | 1명  |
 
+음악 저작권 문제와 기술력 이슈가 해결되면 모바일로 출시해볼 예정입니다.
+
 상세한 포트폴리오 링크 -> https://wonseok1112.tistory.com/45
+
 ![Untitled](https://github.com/rlatjdgh1122/2024Gamjam/assets/98933635/bf0b64e8-5e79-4be2-ab08-db549c915af2)
